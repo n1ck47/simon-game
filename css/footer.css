@@ -1,0 +1,33 @@
+footer{
+    height:7vh;
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+.keys{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    width: 20%;
+}
+
+.keys div{
+    margin-right: 10px;
+}
+
+.keys :nth-child(1){
+    background-color:black;
+    color: white;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 24px;
+}
+
+.keys :nth-child(2){
+    font-size:20px;
+}
