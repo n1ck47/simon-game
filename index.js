@@ -26,7 +26,6 @@ let levelElement = document.getElementById('level');
 let timeout = null;
 
 const root = document.querySelector(':root');
-console.log(root);
 
 //handling onClick
 let handleStart = () => {
@@ -40,9 +39,7 @@ let handleStart = () => {
         let index = Math.floor(Math.random()*4);
         sequence.push(soundsArr[index]);
     }
-    console.log(sequence);
     // level +=1;
-    console.log(level,intervalTime[Math.floor((level-1)/4)]);
     signalInterval = setInterval(play,intervalTime[Math.floor((level-1)/4)]);
 }
 
@@ -68,7 +65,6 @@ let play = () => {
     removeCursor();
     let sound = sounds[sequence[signalNumber]];
     let button = document.getElementById(sequence[signalNumber]);
-    console.log(sequence[signalNumber]);
     sound.pause();
     button.classList.add('glow');
     sound.play();
@@ -92,21 +88,17 @@ let play = () => {
 
 let buttonHandle = (e) => {
     let color = e.key ? keyBinding[e.key] : e.target.id;
-    console.log(color)
     clearTimeout(timeout);
     if(myTurn === false || color === undefined){
         return;
     }
     let button = document.getElementById(color);
-    console.log(button);
     button.classList.add('glow');
     setTimeout(() =>button.classList.remove('glow'),300);
     if(sequence[signalNumber]===color){
-        console.log('correct');
     }
     else{
         fail();
-        console.log('incorrect');
         return;
     }
     let curr = sounds[sequence[signalNumber]]
@@ -127,7 +119,6 @@ let buttonHandle = (e) => {
         if(level<=MAX_LEVEL){
             signalNumber=0;
             levelElement.innerHTML = level;
-            console.log(intervalTime[Math.floor((level-1)/4)])
             signalInterval = setInterval(play,intervalTime[Math.floor((level-1)/4)]);
         }
         else{
@@ -177,7 +168,6 @@ let handleStop = () => {
 handleRules = () => {
     let main = document.getElementById('main-body');
     let rules = document.getElementById('rules-body');
-    console.log(rules.classList)
     if(main.classList.contains('toggle') && rules.classList.contains('toggle')){
         main.classList.remove('toggle');
         rules.classList.remove('toggle');
