@@ -133,6 +133,7 @@ let buttonHandle = (e) => {
 
 let fail = () => {
     endSound.play();
+    removeCursor();
     root.style.setProperty('--simon-color',`red`);
     greenButton.classList.add('glow');
     redButton.classList.add('glow');
@@ -150,6 +151,7 @@ let fail = () => {
     level=1;
     signalNumber=0;
     score = 0;
+    myTurn=false;
     levelElement.innerHTML = level;
 }
 
