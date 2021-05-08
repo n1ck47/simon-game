@@ -1,24 +1,194 @@
 *{
     margin:0;
     padding:0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --simon-content : 'SIMON';
+    --simon-color : black;
+    --simon-background-color : white;
 }
 
 header{
-    background-color: aqua;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 8vh;
+    height: 80px;
+    /* height:6vh; */
+    z-index: 100;
+    background-color:white;
+    /* background-image: url(../simon.png);
+    background-size: cover;
+    background-position: center; */
+    border-bottom: 1px solid rgb(231, 223, 223);
 }
 
-.score{
-    display: flex;
-    font-size: 18px;
+.logo{
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-right: 100px;   
+}
+
+.header-left{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: flex-start;
     margin-left: 100px;
+}
+
+.score, .level{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    font-size: 14px;
+    margin-right: 20px;
+    width:70px;
+    position: relative;
+}
+
+.score :nth-child(1){
+    font-size: 30px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid black;
+    text-align: center;
+    font-weight: 400;
+}
+.level :nth-child(1){
+    font-size: 30px;
+    background-color: white;
+    color: black;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid black;
+    text-align: center;
+    font-weight: 400;
+}
+.score:after{
+    position: absolute;
+    content: "Score";
+    top:39px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.level:after{
+    position: absolute;
+    content: "Level";
+    top:39px;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 
 .rules{
     font-size: 18px;
     margin-right: 100px;
+    font-weight: 400;
+    padding: 5px 8px;
+    width:50px;
+    text-align: center;
+    border-bottom : 1px solid rgb(231, 223, 223);
+    
+}
+
+
+.rules div{
+    transition: 0.3s;
+}
+
+.rules div:hover{
+    cursor: pointer;
+    transform: translate3d(0px,-3px,0px);
+}
+
+@media screen and (max-width:700px) {
+    .rules{
+        margin-right: 1%;
+    }
+
+    .header-left{
+        margin-left: 1%;
+    }
+    .logo{
+        margin-right: 10%;
+    }
+}
+
+.body-inner{
+    width: 100%;
+    border-right: 1px solid rgb(231, 223, 223);
+    transition: all 0.9s;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.body-inner.toggle{
+    -webkit-transform: translate3d(-100%, 0px, 0px);
+    transform: translate3d(-400px, 0px, 0px);
+    visibility: visible;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+
+
+
+.menu{
+    display: none;
+}
+
+
+.menu.toggle{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 360px;
+    height: 100%;
+    padding: 30px 10px 0px 0px;
+    display: flex;
+}
+
+.menu ul{
+    list-style-type: none;
+}
+
+.menu ul li{
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.menu ul li div{
+    line-height: 1.7;
+}
+
+#win{
+    margin-top:30px;
+    font-size: 20px;
+    font-weight: 500;
+    width: 50px;
+    color: green;
+    border-bottom: 1px solid black;
+}
+
+#lose{
+    margin-top:30px;
+    font-size: 20px;
+    font-weight: 500;
+    width: 50px;
+    color: red;
+    border-bottom: 1px solid black;
+}
+
+.menu ul li img{
+    height:20px;
+    width:20px;
+    margin-right: 10px;
+    margin-top:2px
 }

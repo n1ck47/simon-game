@@ -1,7 +1,12 @@
+:root{
+    --simon-content : 'SIMON';
+    --simon-color : black;
+}
+
 .simon-circle{
     height:460px;
     width:460px;
-    background-color:rgba(43, 41, 41);
+    background-color:rgb(253, 253, 253);
     position: relative;
     border-radius: 50%;
     display: flex;
@@ -10,11 +15,14 @@
     justify-content:center;
     padding-top:7px;
     padding-bottom:7px;
+    /* border:2px solid rgb(0, 0, 0); */
+    /* box-shadow:  2px 2px 10px rgb(0, 0, 0); */
 }
 
 .simon-circle::before{
-    content:'SIMON';
-    background-color:rgba(43, 41, 41);
+    content: var(--simon-content);
+    /* background-color:rgba(43, 41, 41); */
+    background-color:var(--simon-background-color);
     height: 200px;
     width: 200px;
     display: flex;
@@ -24,8 +32,11 @@
     font-weight: 600;
     top:140px;
     left:130px;
+    border:2px solid rgb(0, 0, 0);
+   
     text-align: center;
-    color:rgb(231, 228, 228);
+    /* color:rgb(231, 228, 228); */
+    color: var(--simon-color);
     align-items: center;
     justify-content: center;
 }
@@ -38,30 +49,49 @@
     display: flex;
     margin-top:20px;
     margin-bottom: 10px;
+    
     margin-left: 20px;
     margin-right: 20px;
 }
 
+
+
 .top .left{
     height:200px;
     width:200px;
-    background-color:rgb(70, 201, 70);
+    background-color:rgb(70, 201, 70,1);
     border-top-left-radius: 100%;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    border:2.5px solid rgb(12, 158, 12);
     margin-right: 10px;
     /* box-shadow: 1px 1px 20px rgb(83, 80, 80); */
+}
+
+.top .left.glow{
+    background-color:rgb(70, 201, 70,0.5);
+    box-shadow: inset 2px 2px 10px rgb(12, 158, 12);
 }
 
 .top .right{
     height:200px;
     width:200px;
-    background-color:rgb(218, 64, 64);
+    background-color:rgb(218, 64, 64,1);
+    border:2.5px solid rgb(184, 17, 17);
     border-top-left-radius: 10px;
     border-top-right-radius: 100%;
     border-bottom-right-radius: 10px;
     margin-left: 10px;
     /* box-shadow: 1px 1px 20px rgb(100, 99, 99); */
+}
+
+/* .top .right:hover{
+    box-shadow: inset 2px 2px 10px rgb(184, 17, 17);
+} */
+
+.top .right.glow{
+    background-color:rgb(218, 64, 64,0.5);
+    box-shadow: inset 2px 2px 10px rgb(184, 17, 17);
 }
 
 .bottom{
@@ -78,7 +108,8 @@
 .bottom .left{
     height:200px;
     width:200px;
-    background-color: rgb(233, 233, 94);
+    background-color: rgb(233, 233, 94,1);
+    border:2.5px solid rgb(167, 167, 6);
     border-bottom-left-radius: 100%;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -86,13 +117,24 @@
     /* box-shadow: 1px 1px 20px rgb(100, 99, 99); */
 }
 
+.bottom .left.glow{
+    background-color: rgb(233, 233, 94,0.5);
+    box-shadow: inset 2px 2px 10px rgb(167, 167, 6);
+}
+
 .bottom .right{
     height:200px;
     width:200px;
-    background-color:rgb(54, 85, 221);
+    background-color:rgb(54, 85, 221,1);
+    border:2.5px solid rgb(5, 31, 150);
     border-bottom-right-radius: 100%;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
     margin-left: 10px;
     /* box-shadow: 1px 1px 20px rgb(100, 99, 99); */
+}
+
+.bottom .right.glow{
+    background-color:rgb(54, 85, 221,0.5);
+    box-shadow: inset 2px 2px 10px rgb(5, 31, 150);
 }

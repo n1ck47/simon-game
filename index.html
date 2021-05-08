@@ -1,72 +1,97 @@
 <!DOCTYPE html>
 <html>
+    <head>
     <title>Simon</title>
-    <link rel="stylesheet" href="./css/header.css" type="text/css" />
-    <link rel="stylesheet" href="./css/main.css" type="text/css" />
-    <link rel="stylesheet" href="./css/main-circle.css" type="text/css" />
-    <link rel="stylesheet" href="./css/footer.css" type="text/css" />
+        <link rel="stylesheet" href="./css/header.css" type="text/css" />
+        <link rel="stylesheet" href="./css/main.css" type="text/css" />
+        <link rel="stylesheet" href="./css/main-circle.css" type="text/css" />
+        <link rel="stylesheet" href="./css/footer.css" type="text/css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">    
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="body-inner" id='main-body'>
+            <header>
+                <div class="header-left">
+                    <div class="score">
+                        <div id="score">0</div>
+                    </div>
+                    <div class="level">
+                        <div id="level">1</div>
+                    </div>
+                </div>
+                <div class="logo">SIMON</div>
+                <div class="rules">
+                    <div id='rules'>Rules</div>
+                </div>
+            </header>
+            <main>
+                <!-- <video src='./video2.mp4' autoplay muted loop></video> -->
+                <div class="main-middle">
+                    <!-- <div class="main-score">
+                        <div id="level">
+                            <div>LEVEL</div>
+                            <div>1</div>
+                        </div>
+                    </div> -->
+                    <div class="simon-circle">
+                        <div class="top">
+                            <div class="left" id="green">
+            
+                            </div>
+                            <div class="right" id="red">
+            
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="left" id="yellow">
+            
+                            </div>
+                            <div class="right" id="blue">
+            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-third">
+                        <div class="start cursor" id="start">START</div>
+                        <div class="stop cursor disNone" id="stop">STOP</div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="keys green">
+                    <div id="A">A</div>
+                    <div>Green</div>
+                </div>
+                <div class="keys red">
+                    <div id="S">S</div>
+                    <div>Red</div>
+                </div>
+                <div class="keys yellow">
+                    <div id="K">K</div>
+                    <div>Yellow</div>
+                </div>
+                <div class="keys blue">
+                    <div id="L">L</div>
+                    <div>Blue</div>
+                </div>
+            </footer>
+        </div>
+        <div class="menu" id='rules-body'>
+            <ul>
+                <li><img src='./images/13973.svg' /><div>Simon will give the first signal.</div></li>
+                <li><img src='./images/13973.svg' /><div>Repeat that signal by touching the same Color Lens.</div></li>
+                <li><img src='./images/13973.svg' /><div>Simon will repeat the first signal and then add one more.</div></li>
+                <li><img src='./images/13973.svg' /><div>Repeat those two signals in the same order.</div></li>
+                <li><img src='./images/13973.svg' /><div>Simon will continue to play the sequence and add one. Continue to repeat Simon for as long as you can!</div></li>
+                <li><img src='./images/13973.svg' /><div>After the 4th and 8th level, Simon automatically speeds up.</div></li>
+                <li id='win'>Win</li>
+                <li><img src='./images/13973.svg' /><div>Complete the sequence in correct order till 12th level.</div></li>
+                <li id='lose'>Lose</li>
+                <li><img src='./images/13973.svg' /><div>If you fail to repeat a sequence exactly</div></li>
+                <li><img src='./images/13973.svg' /><div>Or if you take more than 5 seconds to repeat a signal</div></li>
+            </ul>
+        </div>
+        <script src='./index.js' ></script>
+    </body>
 </html>
-<head>
-    <header>
-        <div class="score">
-            High Score: 0
-        </div>
-        <div class="rules">
-            Rules
-        </div>
-    </header>
-    <main>
-        <div class="main-middle">
-            <div class="main-score">
-                <div>SCORE: 0</div>
-                <div>LEVEL: 1</div>
-            </div>
-            <div class="simon-circle">
-                <div class="top">
-                    <div class="left" id="green">
-    
-                    </div>
-                    <div class="right" id="red">
-    
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="left" id="yellow">
-    
-                    </div>
-                    <div class="right" id="blue">
-    
-                    </div>
-                </div>
-            </div>
-            <div class="main-third">
-                <div class="start" id="start">START</div>
-                <div class="stop">STOP</div>
-            </div>
-            <div class="main-fourth">
-                <div class="easy">EASY</div>
-                <div class="medium">MEDIUM</div>
-                <div class="hard">HARD</div>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <div class="keys green">
-            <div>A</div>
-            <div>Green</div>
-        </div>
-        <div class="keys red">
-            <div>S</div>
-            <div>Red</div>
-        </div>
-        <div class="keys yellow">
-            <div>K</div>
-            <div>Yellow</div>
-        </div>
-        <div class="keys blue">
-            <div>L</div>
-            <div>Blue</div>
-        </div>
-    </footer>
-    <script src='./index.js' ></script>
-</head>

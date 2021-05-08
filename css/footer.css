@@ -1,8 +1,26 @@
 footer{
-    height:7vh;
+    height:60px;
+    /* height:6vh; */
     display:flex;
     align-items:center;
     justify-content: space-evenly;
+    background-color: white;
+    /* background-image: url(../pexels-sathesh-d-698808.jpg); */
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-top: 1px solid rgb(231, 223, 223);
+    border-bottom: 1px solid rgb(231, 223, 223);
+}
+
+footer:before{
+    content:'';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    /* background-color:rgba(0, 0, 0, 0.8); */
 }
 
 .keys{
@@ -10,6 +28,7 @@ footer{
     align-items:center;
     justify-content: center;
     width: 20%;
+    z-index: 10;
 }
 
 .keys div{
@@ -31,3 +50,20 @@ footer{
 .keys :nth-child(2){
     font-size:20px;
 }
+
+#A + div{
+    border-bottom: 2.5px solid rgb(0, 131, 0,0.7);
+}
+
+#S + div{
+    border-bottom: 2.5px solid rgba(255, 8, 0, 0.7)
+}
+
+#K + div{
+    border-bottom: 2.5px solid rgb(207, 207, 82);
+}
+
+#L + div{
+    border-bottom: 2.5px solid rgb(0, 0, 255,0.7)
+}
+
