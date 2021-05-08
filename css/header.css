@@ -4,7 +4,11 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-
+:root{
+    --simon-content : 'SIMON';
+    --simon-color : black;
+    --simon-background-color : white;
+}
 
 header{
     display: flex;
