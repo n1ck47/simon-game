@@ -115,10 +115,12 @@ let buttonHandle = (e) => {
         score += scoreInterval[Math.floor((level-1)/4)];
         scoreElement.innerHTML = score;
         level += 1;
+        myTurn=false;
         clearInterval(signalInterval);
         if(level<=MAX_LEVEL){
             signalNumber=0;
             levelElement.innerHTML = level;
+            
             signalInterval = setInterval(play,intervalTime[Math.floor((level-1)/4)]);
         }
         else{
